@@ -10,6 +10,7 @@ for (var i = 0; i<section.length;i++){
     }
 }
 
+//menampilkan form dan perhitungan
 function showLingkaran(){
     if(lingkaran.classList.contains('hidden')){
         lingkaran.classList.remove('hidden');
@@ -48,6 +49,8 @@ function showPersegiPanjang(){
     result.innerHTML = '';
 }
 
+
+//menghitung luas dan keliling
 function hitungLingkaran(event){
     var r = document.getElementById('jari').value
     event.preventDefault()
