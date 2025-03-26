@@ -19,6 +19,8 @@ function showLingkaran(){
     }
     persegi.classList.add('hidden');
     persegiPanjang.classList.add('hidden');
+    var result = document.getElementById('result');
+    result.innerHTML = '';
     
 }
 function showPersegi(){
@@ -30,7 +32,8 @@ function showPersegi(){
     }
     lingkaran.classList.add('hidden');
     persegiPanjang.classList.add('hidden');
-    
+    var result = document.getElementById('result');
+    result.innerHTML = '';
 }
 function showPersegiPanjang(){
     if(persegiPanjang.classList.contains('hidden')){
@@ -41,11 +44,59 @@ function showPersegiPanjang(){
     }
     lingkaran.classList.add('hidden');
     persegi.classList.add('hidden');
-    
+    var result = document.getElementById('result');
+    result.innerHTML = '';
 }
 
-function hitungLingkaran(r){
+function hitungLingkaran(event){
+    var r = document.getElementById('jari').value
+    event.preventDefault()
     var luas = (Math.PI * Math.pow(r,2));
     var keliling = (2 * Math.PI * r);
-    console.log(keliling);
+    
+    var resultText = `<p>Luas lingkaran = ${Math.PI} * ${r} * ${r}</p>
+                  <p>Luas lingkaran = ${luas}</p>
+                  <br>
+                  <p>Keliling Lingkaran = 2 * ${Math.PI} * ${r}</p>
+                  <p>Keliling Lingkaran = ${keliling}</p>`
+
+    var result = document.getElementById('result');
+    result.innerHTML = '';
+    result.innerHTML = resultText;
+    result.scrollIntoView({behavior: 'smooth'});
+}
+function hitungPersegi(event){
+    var r = document.getElementById('sisi').value
+    event.preventDefault()
+    var luas = r * r;
+    var keliling = 4 * r;
+    
+    var resultText = `<p>Luas Persegi = ${r} * ${r}</p>
+                  <p>Luas Persegi = ${luas}</p>
+                  <br>
+                  <p>Keliling Persegi = 4 * ${r}</p>
+                  <p>Keliling Persegi = ${keliling}</p>`
+    var result = document.getElementById('result');
+    result.innerHTML = '';
+    result.innerHTML = resultText;
+    result.scrollIntoView({behavior: 'smooth'});
+}
+function hitungPersegiPanjang(event){
+    var p = document.getElementById('panjang').value
+    var l = document.getElementById('lebar').value
+    event.preventDefault()
+    var luas = p * l;
+    var keliling = ( 2 * p ) + ( 2 * l );
+    
+    var resultText = `<p>Luas Persegi Panjang =  ${p} * ${l}</p>
+                  <p>Luas Persegi Panjang = ${luas}</p>
+                  <br>
+                  <p>Keliling Persegi Panjang = 2 * (${p} + ${l})</p>
+                  <p>Keliling Persegi Panjang = ${keliling}</p>`
+
+    var result = document.getElementById('result');
+    result.innerHTML = '';
+    result.innerHTML = resultText;
+    result.scrollIntoView({behavior: 'smooth'});
+
 }

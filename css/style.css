@@ -159,3 +159,7 @@ input {
     font-size: 14px;
     transition: all 0.3s ease;
 }
+
+#result p{
+    font-size: 30px;
+}

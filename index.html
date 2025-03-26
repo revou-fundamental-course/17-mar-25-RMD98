@@ -40,7 +40,7 @@
                     <h2>Lingkaran</h2>
                     <img src="/assets/rumus_lingkaran.jpg" alt="lingkaran" srcset="">
                     <div class="form-container">
-                        <form onsubmit="lingkaran()">
+                        <form onsubmit="hitungLingkaran(event)">
                             <label for="jari">Masukan Nilai Jari-Jari lingkaran</label>
                             <input type="number" name="jari" id="jari" required placeholder="Jari-Jari Lingkaran">
                             <button type="submit">Hitung</button>
@@ -51,7 +51,7 @@
                     <h2>Persegi</h2>
                     <img src="/assets/rumus_persegi.jpg" alt="lingkaran" srcset="">
                     <div class="form-container">
-                        <form onsubmit="hitungPersegi()">
+                        <form onsubmit="hitungPersegi(event)">
                             <label for="sisi">Masukan Nilai Sisi Persegi</label>
                             <input type="number" name="sisi" id="sisi" required placeholder="Sisi Persegi">
                             <button type="submit">Hitung</button>
@@ -62,7 +62,7 @@
                     <h2>Persegi Panjang</h2>
                     <img src="/assets/rumus_persegi_panjang.jpg" alt="lingkaran" srcset="">
                     <div class="form-container">
-                        <form onsubmit="hitungPersegiPanjang()">
+                        <form onsubmit="hitungPersegiPanjang(event)">
                             <label for="panjang">Masukan Nilai Panjang Persegi Panjang</label>
                             <input type="number" name="panjang" id="panjang" required placeholder="Panjang Lingkaran">
                             <label for="lebar">Masukan Nilai Lebar Persegi Panjang</label>
@@ -71,6 +71,9 @@
                         </form>
                     </div>
                 </section>
+                <div class="content" id="result">
+                    
+                </div>
             </div>
         </div>
     </div>
