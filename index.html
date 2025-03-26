@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header and Sidebar Navigation</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header class="header">
+            <h1>Hitung Luas dan Keliling Bangun Datar</h1>
+        </header>
+
+        <div class="main">
+            <div class="content">
+                <div class="content">
+                    <h2>Welcome to My Website</h2>
+                    <p>Gunakan Website ini Untuk Menghitung Keliling dan Luas Bangun datar</p>
+                    <div class="card-group">
+                        <div class="card" onclick="showLingkaran()">
+                            <h3>Lingkaran</h3>
+                            <img src="/assets/lingkaran.png" alt="lingkaran" srcset="">
+                            <p>Hitung Luas dan Keliling lingkaran</p>
+                        </div>
+                        <div class="card" onclick="showPersegi()">
+                            <h3>Persegi</h3>
+                            <img src="/assets/persegi.png" alt="lingkaran" srcset="">
+                            <p>Hitung Luas dan Keliling lingkaran</p>
+                        </div>
+                        <div class="card" onclick="showPersegiPanjang()">
+                            <h3>Persegi Panjang</h3>
+                            <img src="/assets/persegi_panjang.png" alt="lingkaran" srcset="">
+                            <p>Hitung Luas dan Keliling lingkaran</p>
+                        </div>
+                    </div>
+                </div>
+                <section class="content hidden" id="lingkaran">
+                    <h2>Lingkaran</h2>
+                    <img src="/assets/rumus_lingkaran.jpg" alt="lingkaran" srcset="">
+                    <div class="form-container">
+                        <form onsubmit="lingkaran()">
+                            <label for="jari">Masukan Nilai Jari-Jari lingkaran</label>
+                            <input type="number" name="jari" id="jari" required placeholder="Jari-Jari Lingkaran">
+                            <button type="submit">Hitung</button>
+                        </form>
+                    </div>
+                </section>
+                <section class="content hidden" id="persegi">
+                    <h2>Persegi</h2>
+                    <img src="/assets/rumus_persegi.jpg" alt="lingkaran" srcset="">
+                    <div class="form-container">
+                        <form onsubmit="hitungPersegi()">
+                            <label for="sisi">Masukan Nilai Sisi Persegi</label>
+                            <input type="number" name="sisi" id="sisi" required placeholder="Sisi Persegi">
+                            <button type="submit">Hitung</button>
+                        </form>
+                    </div>
+                </section>
+                <section class="content hidden" id="persegiPanjang">
+                    <h2>Persegi Panjang</h2>
+                    <img src="/assets/rumus_persegi_panjang.jpg" alt="lingkaran" srcset="">
+                    <div class="form-container">
+                        <form onsubmit="hitungPersegiPanjang()">
+                            <label for="panjang">Masukan Nilai Panjang Persegi Panjang</label>
+                            <input type="number" name="panjang" id="panjang" required placeholder="Panjang Lingkaran">
+                            <label for="lebar">Masukan Nilai Lebar Persegi Panjang</label>
+                            <input type="number" name="lebar" id="lebar" required placeholder="Lebar Lingkaran">
+                            <button type="submit">Hitung</button>
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="/js/scritp.js"></script>
+</html>
